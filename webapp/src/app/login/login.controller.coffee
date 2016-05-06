@@ -22,11 +22,12 @@ angular.module 'App'
       if !$scope.pin? || !$scope.email?
         $scope.errorPresent = true
         return
-      localStorageService.set('credentials', {email: $scope.email, pin: $scope.pin})
 
       $rootScope.credentials =
         email: $scope.email.toLowerCase().trim()
         pin: $scope.pin.toLowerCase().trim()
+
+      localStorageService.set('credentials', $rootScope.credentials)
 
       redirectToGame()
 
