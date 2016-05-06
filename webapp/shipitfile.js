@@ -6,8 +6,8 @@ module.exports = function (shipit) {
   shipit.initConfig({
     default: {
       workspace: '../tmp',
-      repositoryUrl: 'git@github.com:bingneef/duckhunt.git',
-      deployTo: '/var/www/duckhunt/',
+      repositoryUrl: 'git@github.com:bingneef/letters-numbers.git',
+      deployTo: '/var/www/letters-numbers/',
       dirToCopy: 'webapp/dist',
       ignores: ['.git', 'node_modules', 'bower_components'],
       keepReleases: 10,
@@ -22,7 +22,7 @@ module.exports = function (shipit) {
     },
     production: {
       servers: 'bing@5.157.85.46',
-      branch: 'master',
+      branch: 'develop',
       environment: 'master'
     }
   });
