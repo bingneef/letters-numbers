@@ -12,7 +12,8 @@ angular.module 'App'
 
     $scope.logoutUser = ->
       $rootScope.credentials = null
-      localStorageService.set('credentials', {})
+      localStorageService.set('credentials', null)
+
       $state.go 'fs.login'
 
 
