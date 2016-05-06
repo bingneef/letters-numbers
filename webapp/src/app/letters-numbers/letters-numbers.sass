@@ -1,0 +1,29 @@
+#letters-numbers
+  height: 100vh
+  width: 100vw
+  background: #316CFF
+  color: white
+  position: relative
+  transition: background 500ms ease
+
+  &.success
+    color: white
+    background: green
+
+  &.error
+    color: white
+    background: red
+
+  .score
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    height: 114px
+    position: absolute
+    margin: auto
+    .count, .sum
+      display: block
+      width: 100%
+      font-size: 4rem
+      text-align: center

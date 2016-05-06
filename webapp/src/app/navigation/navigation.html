@@ -1,0 +1,33 @@
+<nav id="navigation" class="navbar">
+  <div class="navbar-left">
+  </div>
+  <div class="navbar-right">
+    <p class="navbar-item" data-ng-click="toggleOverlay()"><strong><i class="fa fa-bars"></i></strong></p>
+  </div>
+</nav>
+
+<div id="overlay-navigation" data-ng-click="hideOverlay()" data-ng-if="overlay">
+  <section class="hero is-fullheight">
+    <div class="hero-header">
+      <div class="is-text-right">
+        <ul>
+          <li>
+            <a class="close-nav" data-ng-click="hideOverlay()"><i class="fa fa-times"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="container">
+        <h3 class="title is-2">
+          <a data-ng-click="logoutUser()">
+            <span>
+              Logout {{currentUser.email}}
+            </span>
+          </a>
+        </h3>
+      </div>
+    </div>
+  </section>
+</div>
