@@ -1,10 +1,10 @@
 angular.module 'App'
-  .controller 'LettersNumbersController', ($rootScope, $scope, $state, $window, $timeout, $interval, SocketService, SweetAlert, socketPrefix) ->
+  .controller 'LettersNumbersController', ($rootScope, $scope, $state, $window, $timeout, $interval, SocketService, SweetAlert, socketCredentials) ->
     'ngInject'
 
     return unless $rootScope.credentials
     room = "#{$rootScope.credentials.email}::#{$rootScope.credentials.pin}"
-    SocketService.initiate({apiKey: '2fkBFrjDQ4JFLvCynFYX', prefix: socketPrefix}, room)
+    SocketService.initiate(socketCredentials, room)
 
     $scope.status = {}
     activeLevel = 'letters-numbers'

@@ -22,8 +22,13 @@ module.exports = function (shipit) {
     },
     production: {
       servers: 'bing@5.157.85.46',
+      branch: 'master',
+      deployTo: '/var/www/letters-numbers/'
+    },
+    staging: {
+      servers: 'bing@5.157.85.46',
       branch: 'develop',
-      environment: 'master'
+      deployTo: '/var/www/letters-numbers/'
     }
   });
 
