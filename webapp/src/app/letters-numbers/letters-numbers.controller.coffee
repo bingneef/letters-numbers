@@ -8,7 +8,7 @@ angular.module 'App'
 
     $scope.status = {}
     activeLevel = 'letters-numbers'
-    $scope.answerCode = 'fibonacci'
+    $scope.answerCode = 'ef15d8edd00a6960c9c16937cbf14212'
     $scope.correctTiles = false
     $scope.userInputCode = ''
 
@@ -19,7 +19,7 @@ angular.module 'App'
 
       if $scope.userInputCode.length == 0
         $scope.codeStatus = ''
-      else if angular.equals($scope.userInputCode.toLowerCase().replace(/ /g,''), $scope.answerCode)
+      else if angular.equals(md5($scope.userInputCode.toLowerCase().replace(/ /g,'')), $scope.answerCode)
         $scope.codeStatus = 'success'
       else
         $scope.codeStatus = 'error'
