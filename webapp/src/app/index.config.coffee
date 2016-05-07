@@ -1,8 +1,9 @@
 angular.module 'App'
-  .config ($logProvider, $httpProvider, localStorageServiceProvider) ->
+  .config ($logProvider, $httpProvider, $compileProvider, localStorageServiceProvider) ->
     'ngInject'
     # Enable log
-    $logProvider.debugEnabled true
+    $logProvider.debugEnabled false
+    $compileProvider.debugInfoEnabled false
     # Set options third-party lib
     $httpProvider.interceptors.push('AuthenticationInterceptor')
     localStorageServiceProvider.setPrefix('LettersNumbers')

@@ -1,4 +1,4 @@
-<div id="letters-numbers-slave" data-ng-click="compassClick()">
+<div id="letters-numbers-slave">
   <div class="number-item" data-ng-repeat="tile in tiles | orderBy:'key'" data-ng-click="tileClick(tile)" data-ng-class="{'selected': tile.selected}">
     {{tile.letter}}
   </div>
