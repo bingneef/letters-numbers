@@ -1,5 +1,7 @@
-<div id="letters-numbers-slave">
-  <div class="number-item" data-ng-repeat="tile in tiles | orderBy:'key'" data-ng-click="tileClick(tile)" data-ng-class="{'selected': tile.selected}">
-    {{tile.letter}}
+<div id="letters-numbers-slave" class="hero is-fullheight is-bold">
+  <div class="columns is-mobile is-multiline is-gapless">
+    <div class="column is-3 number-item" data-ng-repeat="tile in tiles | orderBy:'key'" data-ng-click="tileClick(tile)" data-ng-class="{'selected': tile.selected}">
+      {{tile.letter}}
+    </div>
   </div>
 </div>

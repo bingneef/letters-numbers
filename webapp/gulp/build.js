@@ -3,9 +3,27 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var gulpNgConfig = require('gulp-ng-config');
+var coffee = require('gulp-js2coffee');
+var util = require('gulp-util');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
+});
+
+gulp.task('setConstants', function (development) {
+  var environment = 'development';
+  if (util.env.environment == 'staging' || util.env.environment == 'production') {
+    environment = util.env.environment;
+  }
+
+  return gulp.src('src/app/index.constants.json')
+  .pipe(gulpNgConfig('App', {
+    createModule: false,
+    environment: 'env.' + environment
+  }))
+  .pipe(coffee())
+  .pipe(gulp.dest('src/app'))
 });
 
 gulp.task('partials', ['markups'], function () {

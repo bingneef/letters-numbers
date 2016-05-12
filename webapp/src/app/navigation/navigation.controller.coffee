@@ -1,5 +1,5 @@
 angular.module 'App'
-  .controller 'NavigationController', ($rootScope, $scope, $state, $timeout, localStorageService) ->
+  .controller 'NavigationController', ($rootScope, $scope, $state, $timeout, Authentication) ->
     'ngInject'
 
     $scope.overlay = false
@@ -11,10 +11,7 @@ angular.module 'App'
       $scope.overlay = !$scope.overlay
 
     $scope.logoutUser = ->
-      $rootScope.credentials = null
-      localStorageService.set('credentials', null)
-
-      $state.go 'fs.login'
+      Authentication.clearAndLeave()
 
 
     return

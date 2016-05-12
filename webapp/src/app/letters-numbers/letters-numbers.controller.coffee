@@ -2,8 +2,8 @@ angular.module 'App'
   .controller 'LettersNumbersController', ($rootScope, $scope, $state, $window, $timeout, $interval, SocketService, SweetAlert, socketCredentials) ->
     'ngInject'
 
-    return unless $rootScope.credentials
-    room = "#{$rootScope.credentials.email}::#{$rootScope.credentials.pin}"
+    return unless $rootScope.shallowCredentials
+    room = "#{$rootScope.shallowCredentials.email}::#{$rootScope.shallowCredentials.pin}"
     SocketService.initiate(socketCredentials, room)
 
     $scope.status = {}

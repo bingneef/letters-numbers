@@ -9,22 +9,19 @@ angular.module 'App'
             controller: 'NavigationController'
             templateUrl: 'app/navigation/navigation.html'
       .state 'slave.letters-numbers',
-        url: '/slave/letters-numbers'
+        url: '/letters-numbers/slave'
         views:
           '@':
             templateUrl: 'app/letters-numbers/letters-numbers-slave.html'
             controller: 'LettersNumbersSlaveController'
             controllerAs: 'letters-numbers-slave'
-      .state 'fs',
-        abstract: true
-
-      .state 'fs.login',
-        url: '/login'
+      .state 'splash',
+        url: '/'
         views:
           '@':
-            templateUrl: 'app/login/login.html'
-            controller: 'LoginController'
-            controllerAs: 'login'
+            templateUrl: 'app/splash/splash.html'
+            controller: 'SplashController'
+            controllerAs: 'Splash'
 
       .state 'app',
         abstract: true
@@ -40,4 +37,4 @@ angular.module 'App'
             controller: 'LettersNumbersController'
             controllerAs: 'letters-numbers'
 
-    $urlRouterProvider.otherwise '/login'
+    $urlRouterProvider.otherwise '/'
