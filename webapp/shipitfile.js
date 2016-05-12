@@ -20,15 +20,17 @@ module.exports = function (shipit) {
         remote: false
       }
     },
-    production: {
-      servers: 'bing@5.157.85.46',
-      branch: 'master',
-      deployTo: '/var/www/letters-numbers/'
-    },
     staging: {
       servers: 'bing@5.157.85.46',
       branch: 'develop',
-      deployTo: '/var/www/letters-numbers/'
+      deployTo: '/var/www/letters-numbers/',
+      environment: 'development'
+    },
+    production: {
+      servers: 'bing@5.157.85.46',
+      branch: 'master',
+      deployTo: '/var/www/letters-numbers/',
+      environment: 'production'
     }
   });
 
