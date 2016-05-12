@@ -13,7 +13,7 @@ angular.module 'App'
       {
         key: 1
         value: 1597
-        letter: 'B'
+        letter: 'C'
       }
       {
         key: 2
@@ -23,7 +23,7 @@ angular.module 'App'
       {
         key: 3
         value: 4181
-        letter: 'I'
+        letter: 'F'
       }
       {
         key: 4
@@ -33,7 +33,7 @@ angular.module 'App'
       {
         key: 5
         value: 13
-        letter: 'K'
+        letter: 'N'
       }
       {
         key: 6
@@ -43,7 +43,7 @@ angular.module 'App'
       {
         key: 7
         value: 34
-        letter: 'R'
+        letter: 'I'
       }
       {
         key: 8
@@ -58,17 +58,17 @@ angular.module 'App'
       {
         key: 10
         value: 1
-        letter: 'S'
+        letter: 'O'
       }
       {
         key: 11
         value: 1
-        letter: 'O'
+        letter: 'C'
       }
       {
         key: 12
         value: 89
-        letter: 'U'
+        letter: 'I'
       }
       {
         key: 13
@@ -78,12 +78,12 @@ angular.module 'App'
       {
         key: 14
         value: 3
-        letter: 'U'
+        letter: 'B'
       }
       {
         key: 15
         value: 2
-        letter: 'T'
+        letter: 'N'
       }
       {
         key: 16
@@ -98,7 +98,7 @@ angular.module 'App'
       {
         key: 18
         value: 610
-        letter: 'L'
+        letter: 'F'
       }
       {
         key: 19
@@ -118,17 +118,17 @@ angular.module 'App'
       {
         key: 22
         value: 28657
-        letter: 'I'
+        letter: 'C'
       }
       {
         key: 23
         value: 17711
-        letter: 'E'
+        letter: 'B'
       }
       {
         key: 24
         value: 10946
-        letter: 'A'
+        letter: 'O'
       }
     ]
 
