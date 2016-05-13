@@ -6,6 +6,8 @@ angular.module 'App'
     room = "#{$rootScope.shallowCredentials.email}::#{$rootScope.shallowCredentials.pin}"
     SocketService.initiate(socketCredentials, room)
 
+    $scope.hostReady = false
+
     $scope.status = {}
     activeLevel = 'letters-numbers'
 
@@ -137,6 +139,10 @@ angular.module 'App'
       switch data.kind
         when 'status'
           paintBackground(data.value)
+        when 'hostReady'
+          notifyReady true unless data.response
+          $scope.hostReady = true
+          $scope.$apply()
 
     $scope.tileClick = (tile) ->
       tile.selected = !tile.selected
@@ -147,4 +153,13 @@ angular.module 'App'
         tiles: $scope.tiles
 
       SocketService.socketTransmit payload
-    return
+
+    notifyReady = (response) ->
+      payload =
+        level: activeLevel
+        destination: 'host'
+        kind: 'slaveReady'
+        response: response
+      SocketService.socketTransmit payload
+
+    notifyReady false

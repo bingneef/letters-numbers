@@ -11,6 +11,7 @@ angular.module 'App'
     $scope.answerCode = 'ef15d8edd00a6960c9c16937cbf14212'
     $scope.correctTiles = false
     $scope.userInputCode = ''
+    $scope.slaveReady = false
 
     $scope.$watch 'userInputCode', ->
       unless $scope.correctTiles
@@ -34,6 +35,10 @@ angular.module 'App'
         when 'tileStatus'
           $scope.tiles = data.tiles
           $scope.$apply()
+        when 'slaveReady'
+          notifyReady true unless data.response
+          $scope.slaveReady = true
+          $scope.$apply()
 
     $scope.$watch 'tiles', ->
       $scope.tilesCount = 0
@@ -49,6 +54,13 @@ angular.module 'App'
         $scope.correctTiles = false
 
 
+    notifyReady = (response) ->
+      payload =
+        level: activeLevel
+        destination: 'slave'
+        kind: 'hostReady'
+        response: response
+      SocketService.socketTransmit payload
 
-    return
+    notifyReady false
 
