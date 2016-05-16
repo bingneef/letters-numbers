@@ -6,7 +6,7 @@ angular.module 'App'
     $compileProvider.debugInfoEnabled false
     # Set options third-party lib
     $httpProvider.interceptors.push('AuthenticationInterceptor')
-    localStorageServiceProvider.setPrefix('SnowflakeSimple')
+    localStorageServiceProvider.setPrefix('SnowflakePlatform')
     localStorageServiceProvider.setStorageCookieDomain(CookieDomain)
 
 
