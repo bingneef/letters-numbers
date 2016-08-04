@@ -4,9 +4,9 @@
       "OverviewUrl": "http://www.snowflakewebdesign.nl",
       "CookieDomain": "localhost",
       "AuthClient": "http://localhost:3000/#/shallow-login",
-      "socketUrl": "http://snowflakewebdesign.nl:8000/",
+      "socketUrl": "http://5.157.85.46:5050/",
       "socketCredentials": {
-        "apiKey": "2fkBFrjDQ4JFLvCynFYX",
+        "token": "dWwGPpPHX8dAIBYY",
         "prefix": "letters-numbers"
       }
     },
@@ -14,9 +14,9 @@
       "OverviewUrl": "http://www.snowflakewebdesign.nl",
       "CookieDomain": ".snowflakewebdesign.nl",
       "AuthClient": "http://platform.snowflakewebdesign.nl/#/shallow-login",
-      "socketUrl": "http://snowflakewebdesign.nl:8000/",
+      "socketUrl": "http://5.157.85.46:5050/",
       "socketCredentials": {
-        "apiKey": "2fkBFrjDQ4JFLvCynFYX",
+        "token": "dWwGPpPHX8dAIBYY",
         "prefix": "letters-numbers"
       }
     }
